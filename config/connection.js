@@ -19,11 +19,11 @@ if(process.env.JAWSDB_URL) {
 
 // Make connection.
 connection.connect(function(err) {
-  if (err) {
+  if (err) {  //if there is an error, console.log the error for user
     console.error("error connecting: " + err.stack);
     return;
   }
-  console.log("connected as id " + connection.threadId);
+  console.log("connected as id " + connection.threadId);  //if no error, console.log connection and connection id
 });
 
 // Export connection for our ORM to use.
