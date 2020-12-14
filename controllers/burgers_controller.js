@@ -8,7 +8,9 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+//API route to run methods
 router.get("/", function(req, res) {
+  //burger.all gets and shows data that we have and render to template
   burger.all(function(data) {
     var hbsObject = {
       burgers: data
@@ -19,11 +21,8 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create([
-    "burger_name", "devoured"
-  ], [
-    req.body.burger_name, req.body.devoured
-  ], function(result) {
+  burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], 
+  function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
