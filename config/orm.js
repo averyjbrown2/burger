@@ -40,6 +40,7 @@ function objToSql(ob) {
 }
 
 // Object for all our SQL statement functions.
+//all will get specific records from particular table
 var orm = {
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
@@ -50,6 +51,7 @@ var orm = {
       cb(result);
     });
   },
+  //create will insert values into a table
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -71,6 +73,7 @@ var orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
+  //on a table, set a value, check a condition, then generate a callback which will give result
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
