@@ -1,5 +1,7 @@
+//pulling in express
 var express = require("express");
 
+//grabs router from express
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
