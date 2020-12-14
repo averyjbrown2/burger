@@ -7,7 +7,7 @@ var app = express();
 // Tells express where to read static files for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-// Parse application body as JSON
+//url encoding and body parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -16,10 +16,11 @@ var exphbs = require("express-handlebars");
 
 //sets handlebars as default layout
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-//sets 
+
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
+// routing system tells app what to do when you hit a certain route
+//Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
