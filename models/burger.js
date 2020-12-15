@@ -11,16 +11,18 @@ var burger = {
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
-    //burger.create does create operation on orm and then does callback on results
+    //burger.create creates operation on orm and then does callback on results
     orm.create("burgers", cols, vals, function(res) {
       cb(res);
     });
   },
+  //burger.updates table, then does callback with new values
   update: function(objColVals, condition, cb) {
     orm.update("burgers", objColVals, condition, function(res) {
       cb(res);
     });
   },
+  //burger.delete deletes items from table, then returns with updated values
   delete: function(condition, cb) {
     orm.delete("burgers", condition, function(res) {
       cb(res);
@@ -28,5 +30,5 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (burgersController.js).
+// Export the database functions for the controller (burgers_controller.js).
 module.exports = burger;
