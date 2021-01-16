@@ -1,7 +1,7 @@
 body {
     padding: 5px;
     margin: 5px;
-    background-color: #faebd7;
+    background-color: red;
     font-family: 'Kalam', cursive;
   }
   
@@ -18,7 +18,11 @@ body {
   .form-group {
     margin-bottom: 5px;
   }
- img {
-  height: 200px;
-  width: 200px;
+#change-devoured {
+  background-color: green;
+}
+
+ .img-fluid.mini {
+   height: 400px;
+   width: auto;
  }
