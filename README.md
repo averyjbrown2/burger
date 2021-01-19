@@ -47,4 +47,4 @@ averybgcoding@gmail.com
 
 
 ### Images  
-![Web Page](./)    
+![Web Page](./assets/img/image1.png)    
