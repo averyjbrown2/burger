@@ -1,28 +1,17 @@
 body {
     padding: 5px;
     margin: 5px;
-    background-color: red;
     font-family: 'Kalam', cursive;
   }
   
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-form {
+  .form-group {
     padding: 5px;
     margin: 5px;
-    background: aqua;
   }
-  
-  .form-group {
-    margin-bottom: 5px;
+  .card-body {
+    background-color: #f2a359;
   }
-#change-devoured {
-  background-color: green;
-}
 
  .img-fluid.mini {
-   height: 400px;
-   width: auto;
+  height: ;
  }
