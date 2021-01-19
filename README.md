@@ -47,5 +47,4 @@ averybgcoding@gmail.com
 
 
 ### Images  
-![README VS Code](./Assets/image1.png)    
-![README Preview](./Assets/image2.png)
+![Web Page](./assets/img/image1.png)    
